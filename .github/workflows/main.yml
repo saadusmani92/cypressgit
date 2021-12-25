@@ -55,13 +55,6 @@ jobs:
                   git add allure-results -f
                   git commit -m "[chore] autogenerate Allure report" -a
                   
-            - name: Deploy to GH Pages
-              run: |
-                git config --global user.email ${{secrets.GITHUB_EMAIL}}
-                git config --global user.name ${{secrets.GITHUB_USERNAME}}
-                git remote set-url origin https://${{secrets.GITHUB_PERSONAL_TOKEN}}@github.com/saadusmani92/cypressgit.git
-                npm run deploy
-
             - name: Push changes
               if: always()
               uses: ad-m/github-push-action@master
