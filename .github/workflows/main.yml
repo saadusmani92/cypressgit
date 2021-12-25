@@ -13,10 +13,7 @@ jobs:
             - name: Download Cypress
               uses: bahmutov/npm-install@v1
               env:
-                  CYPRESS_INSTALL_BINARY: 0
-
-            - name: Eslint and Prettify
-              run: npm run lint
+                  CYPRESS_INSTALL_BINARY:
 
             - name: Check Cypress cache
               run: |
